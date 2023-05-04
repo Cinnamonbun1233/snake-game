@@ -12,12 +12,12 @@ public class GameField extends JPanel implements ActionListener {
     private final int SIZE = 320;
     private final int DOT_SIZE = 16;
     private final int ALL_DOTS = 400;
+    private final int[] x = new int[ALL_DOTS];
+    private final int[] y = new int[ALL_DOTS];
     private Image dot;
     private Image apple;
     private int appleX;
     private int appleY;
-    private final int[] x = new int[ALL_DOTS];
-    private final int[] y = new int[ALL_DOTS];
     private int dots;
     private boolean left = false;
     private boolean right = true;
@@ -34,9 +34,9 @@ public class GameField extends JPanel implements ActionListener {
     }
 
     public void loadImages() {
-        ImageIcon iia = new ImageIcon("apple.png");
+        ImageIcon iia = new ImageIcon("src/images/apple.png");
         apple = iia.getImage();
-        ImageIcon iid = new ImageIcon("dot.png");
+        ImageIcon iid = new ImageIcon("src/images/dot.png");
         dot = iid.getImage();
     }
 
